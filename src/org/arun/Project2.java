@@ -62,8 +62,8 @@ public class Project2 {
 
 		// Click on MenuBar Button
 		WebElement Menubar = driver.findElement(By.xpath("//a[@href='#']"));
-		Menubar.click();
-		Menubar.click();
+		Actions a = new Actions(driver);
+		a.doubleClick(Menubar).build().perform();
 
 		// Select the Facility Option Used by Select Class
 		WebElement DropDown = driver.findElement(By.name("facility"));
